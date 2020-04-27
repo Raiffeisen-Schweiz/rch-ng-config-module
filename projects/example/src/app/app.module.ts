@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ConfigModule, ConfigService } from 'ng-config-module';
+import { ConfigModule, ConfigService } from '@raiffeisen-schweiz/ng-config-module';
 import { AppConfig } from './app-config';
 import { AppComponent } from './app.component';
 

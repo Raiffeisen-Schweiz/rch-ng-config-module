@@ -1,4 +1,4 @@
-# ng-config-module [![Build Status](https://travis-ci.org/domirs/ng-config-module.svg?branch=master)](https://travis-ci.org/domirs/ng-config-module) [![npm version](https://badge.fury.io/js/ng-config-module.svg)](https://badge.fury.io/js/ng-config-module)
+# @raiffeisen-schweiz/ng-config-module [![Build Status](https://travis-ci.org/raiffeisen-schweiz/rch-ng-config-module.svg?branch=master)](https://travis-ci.org/raiffeisen-schweiz/rch-ng-config-module) [![npm version](https://badge.fury.io/js/%40raiffeisen-schweiz%2Fng-config-module.svg)](https://badge.fury.io/js/%40raiffeisen-schweiz%2Fng-config-module)
 
 Provide configuration options through meta tags.
 
@@ -6,7 +6,7 @@ Provide configuration options through meta tags.
 
 First you need to install the npm module:
 
-`npm install ng-config-module`
+`npm install @raiffeisen-schweiz/ng-config-module`
 
 ## Usage
 
@@ -15,14 +15,11 @@ First you need to install the npm module:
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ConfigModule, ConfigService } from 'ng-config-module';
+import { ConfigModule, ConfigService } from '@raiffeisen-schweiz/ng-config-module';
 import { AppConfig } from './app-config';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    ConfigModule
-  ],
+  imports: [BrowserModule, ConfigModule],
   providers: [
     {
       provide: AppConfig,
@@ -31,10 +28,11 @@ import { AppConfig } from './app-config';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 ### Create `AppConfig`
+
 ```typescript
 export class AppConfig {
   api: string;
@@ -42,21 +40,23 @@ export class AppConfig {
 ```
 
 ### Add configurations to `index.html`
+
 ```html
 ...
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>NgConfigModule</title>
-  <base href="/">
+  <base href="/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta name="config" property="api" content="https://api.github.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta name="config" property="api" content="https://api.github.com" />
 </head>
 ...
 ```
 
 ### Use the configuration
+
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { AppConfig } from './app-config';
@@ -64,12 +64,12 @@ import { AppConfig } from './app-config';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   api: string;
 
-  constructor(private config: AppConfig) { }
+  constructor(private config: AppConfig) {}
 
   ngOnInit() {
     this.api = this.config.api;

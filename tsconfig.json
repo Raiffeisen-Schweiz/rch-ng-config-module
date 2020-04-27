@@ -13,7 +13,7 @@
     "target": "es2015",
     "lib": ["es2018", "dom"],
     "paths": {
-      "ng-config-module": ["dist/config/config", "dist/config"]
+      "@raiffeisen-schweiz/ng-config-module": ["dist/config/config", "dist/config"]
     }
   },
   "angularCompilerOptions": {

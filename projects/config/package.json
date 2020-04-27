@@ -1,5 +1,5 @@
 {
-  "name": "ng-config-module",
+  "name": "@raiffeisen-schweiz/ng-config-module",
   "version": "3.0.2",
   "keywords": [
     "angular",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/domirs/ng-config-module.git"
+    "url": "https://github.com/raiffeisen-schweiz/rch-ng-config-module.git"
   },
   "peerDependencies": {
     "@angular/common": "^9.0.5",
