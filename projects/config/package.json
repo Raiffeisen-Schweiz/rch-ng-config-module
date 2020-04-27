@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/raiffeisen-schweiz/rch-ng-config-module.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@angular/common": "^9.0.5",
     "@angular/core": "^9.0.5",
